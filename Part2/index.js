@@ -1,9 +1,11 @@
-//Functions
+//Perfoming a task
 function greet(name, lastName) {
     //name here is a parameter
     console.log('hello ' + name + ' ' + lastName);
 }
+//Calculating a value
+function square(number){
+    return number * number;
+}
 
-greet('Ben', 'Njau');//ben here is an argument
-greet('dianah', 'Wakire');
-//lastName above by default is undefined
+console.log(square(2));
