@@ -3,4 +3,6 @@ let person = {
     name: 'Mosh',
     age: 20
 }
-console.log(person)
+//Dot notation
+person.name = 'kimangas';
+console.log(person.name); 
