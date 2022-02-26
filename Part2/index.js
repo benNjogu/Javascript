@@ -4,6 +4,6 @@ function greet(name, lastName) {
     console.log('hello ' + name + ' ' + lastName);
 }
 
-greet('Ben');//ben here is an argument
-greet('dianah');
+greet('Ben', 'Njau');//ben here is an argument
+greet('dianah', 'Wakire');
 //lastName above by default is undefined
