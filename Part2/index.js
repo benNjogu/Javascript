@@ -1,4 +1,6 @@
-//Array literal
-let selectedColors = ['red', 'green'];
-selectedColors[2] = 1;
-console.log(selectedColors.length);
+//Functions
+function greet(){
+    console.log('hello world')
+}
+
+greet();
