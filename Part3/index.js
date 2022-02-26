@@ -1,18 +1,10 @@
 
 let x = 10;
-let y = 3;
 
-console.log(x + y);//x + y is an expression(something that produces a value)
-console.log(x - y);
-console.log(x / y);
-console.log(x % y);
-console.log(x ** y);//exponentiation
-
-//increment(++)
-console.log(++x);
-console.log(x++);
+x += 5;//addition-assignment operator
 console.log(x);
-//decrement(--)
-console.log(--x);
-console.log(x--);
+
+x = x * 3;
+console.log(x);
+x *= 3;//multiplication-assignment operator
 console.log(x);
