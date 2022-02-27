@@ -1,32 +1,26 @@
-//Challenge 4
+//Challenge 5
+//Falsy
+//undefined
+//null
+//''
+//false
+//0
+//NaN
 
 
 //MY ANSWER
-checkOddOrEven(10);
 
-function checkOddOrEven(limit) {
-    let i = 0;
-    while (i <= limit) {
-
-        if (i % 2 === 0)
-            console.log(i + ' EVEN');
-        else
-            console.log(i + ' ODD')
-
-        i++;
-    }
-}
 console.log('-------------------')
 //TUTORS ANSWER
-//===> Used a for loop
-showNumbers(10)
-function showNumbers(limit) {
-    for (let i = 0; i <= limit; i++) {
-        //if (i % 2 === 0) console.log(i + ' EVEN');
-        //else console.log(i + ' ODD')
-        const message = (i % 2 === 0) ? ' EVEN' : ' ODD';
-        console.log(i, message);
-    }
+const array = [null, 0, 1, 2, 3];
+console.log(countTruthy(array));
+
+function countTruthy(array) {
+    let count = 0;
+    for (let value of array)
+        if (value)
+            count++;
+    return count;
 }
 
 /*
