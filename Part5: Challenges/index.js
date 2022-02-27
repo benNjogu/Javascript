@@ -1,28 +1,45 @@
-//Challenge 1
-//Write a function that returns two numbers 
-//and returns the maximum of the two.
+//Challenge 2
+//Divisible by 3 => Fizz
+//Divisible by 5 => Buzz
+//Divisible by both 3 and 5 => FizzBuzz
+//Not divisible by 3 or 5 => input
+//Not a number => 'Not a Number'
 
 //MY ANSWER
-function maxNum(num1, num2){
-    if(num1 > num2)
-        return num1 + ' is the greatest!';
-    else if(num1 < num2)
-        return num2 + ' is the greatest!';
-    else return num1 + ' and ' + num2 + ' are equal.';
-}
+const myOutput = fizzBuzz(15);
+console.log(myOutput);
 
-let returnedNumber = maxNum(3, 2);
-console.log(returnedNumber);
+function fizzBuzz(myInput) {
+    if (myInput % 3 === 0 && myInput % 5 === 0)
+        return 'FizzBuzz';
+    else if (myInput % 3 !== 0 && myInput % 5 !== 0)
+        return myInput;
+    else if (myInput % 3 === 0)
+        return 'Fizz';
+    else if (myInput % 5 === 0)
+        return 'Buzz';
+    else
+        return 'Not a Number';
+}
 
 
 //TUTORS ANSWER
-let number = max(3, 5);
-console.log(number);
+const output = fizzBuzz(false);
+console.log(output);
+function fizzBuzz(input) {
+    if (typeof input !== 'number')
+        return NaN;
 
-function max(a, b){
-    return (a > b) ? a : b;
+    if ((input % 3 === 0) && (input % 5 === 0))
+        return 'FizzBuzz';
+    if (input % 3 === 0)
+        return 'Fizz';
+    if (input % 5 === 0)
+        return 'Buzz';
+
+    return input;
 }
 
 /*
-CONCLUSION ==> The tutors code is cleaner!
+CONCLUSION ==> I was wrong! very wrong! but enlightened
 */
