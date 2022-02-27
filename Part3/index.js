@@ -1,10 +1,8 @@
 
-let x = 1;
+//If a customer has more than a 100,
+// points they are a gold customer, otherwise, 
+//they are a silver customer.
 
-//Strict equality operator(Ensures same Type and value)
-console.log(x === 1);
-console.log(x === '1');
-
-//Lose equality operator(Checks value equality only)
-console.log(x == 1);
-console.log(x == '1');
+let points = 110;
+customer = points > 100 ? 'gold' : 'silver';
+console.log(customer);
