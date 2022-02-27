@@ -1,24 +1,40 @@
-//Challenge 8
-//Multiples of 3 and 5 between 0 and 10
-//Multiples of 3 => 3, 6, 9, 12, 15, 18
-//Multiples of 5 => 5, 10, 15, 20
+//Challenge 9
+//Grading system
+//Calculate average first
+//1-59 = F
+//60-69 = D
+//70-79 = C
+//80-89 = B
+//90-100 = A
 
 //MY ANSWER
-console.log(sum(20));
+const marks = [80, 80, 90];
 
-function sum(limit) {
-    let sum = 0;
-    for (let i = 0; i <= limit; i++)
-        if ((i % 3 == 0) || (i % 5 == 0))
-            sum += i;
+console.log(calculateGrade(marks));
 
-    for (let i = 0; i <= limit; i++)
-        if ((i % 3 == 0) && (i % 5 == 0))
-            sum += i;
+function calculateGrade(marks) {
 
-    return sum;
+    const average = calculateAverage(marks);
+
+    if (average >= 90)
+        return 'A';
+    if (average >= 80)
+        return 'B';
+    if (average >= 70)
+        return 'C';
+    if (average >= 60)
+        return 'D';
+
+    return 'F';
 }
 
+function calculateAverage(marks) {
+    let average = 0;
+    for (let mark of marks)
+        average += mark;
+
+    return average / marks.length;
+}
 
 console.log('-------------------')
 //TUTORS ANSWER
