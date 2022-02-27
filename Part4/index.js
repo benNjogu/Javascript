@@ -1,15 +1,9 @@
 
-const person = {
-    name: 'Ben',
-    age: 30
-};
-   
-//for in loop is best choice to iterate over properties(keys)
-for(let key in person)
-    console.log(key, person[key]);
+let i = 0;
 
-//for of loop best choice to iterate over values 
-const colors = ['red', 'green', 'blue'];
-for(let color of colors)
-    console.log(color);
-    
+while(i <= 10){
+    if(i === 5) break;
+    console.log(i);
+    i++;
+}
+  //prints 0-4  
