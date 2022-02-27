@@ -1,8 +1,24 @@
 
-//If a customer has more than a 100,
-// points they are a gold customer, otherwise, 
-//they are a silver customer.
+//<Falsy>
+//undefined 
+//null
+//0
+//false
+//''
+//NaN
 
-let points = 110;
-customer = points > 100 ? 'gold' : 'silver';
-console.log(customer);
+//<Truthy>
+//anything that is not falsy
+
+console.log(false || true);
+console.log(false || 'Ben');
+console.log(false ||  1);
+//short-circuiting
+console.log(false || 1 || 2);
+
+console.log("--------------------");
+
+let userColor = 'red';
+let defaultColor = 'blue';
+let currentColor = userColor || defaultColor;
+console.log(currentColor);
