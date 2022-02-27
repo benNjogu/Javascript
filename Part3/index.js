@@ -1,7 +1,25 @@
 
-let x = 2 + 3 * 4;
-console.log(x);//=14
+let a = 'red';
+let b = 'blue';
 
-console.log('------------')
-let y = (2 + 3) * 4;
-console.log(y);//=20
+//swapping using the third variable
+let c;
+c = a;
+a = b;
+b = c;
+
+console.log(a);
+console.log(b);
+
+console.log('--------------');
+
+let x = 4;
+let y = 5;
+
+//swapping without using the third variable
+x = x + y;
+y = x -y;
+x = x - y;
+
+console.log(x);
+console.log(y);
