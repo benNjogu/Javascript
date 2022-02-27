@@ -1,26 +1,25 @@
-//Challenge 5
-//Falsy
-//undefined
-//null
-//''
-//false
-//0
-//NaN
+//Challenge 7
 
 
 //MY ANSWER
 
 console.log('-------------------')
 //TUTORS ANSWER
-const array = [null, 0, 1, 2, 3];
-console.log(countTruthy(array));
+const movie = {
+    title: 'The alchemist',
+    releaseYear: 2018,
+    rating: 4.5,
+    director: 'Ben'
+};
 
-function countTruthy(array) {
-    let count = 0;
-    for (let value of array)
-        if (value)
-            count++;
-    return count;
+showProperties(movie);
+
+function showProperties(obj) {
+    for (let keyValue in obj) {
+        if (typeof obj[keyValue] === 'string') {
+            console.log(keyValue, obj[keyValue]);
+        }
+    }
 }
 
 /*
