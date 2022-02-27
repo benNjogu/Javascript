@@ -1,45 +1,35 @@
-//Challenge 2
-//Divisible by 3 => Fizz
-//Divisible by 5 => Buzz
-//Divisible by both 3 and 5 => FizzBuzz
-//Not divisible by 3 or 5 => input
-//Not a number => 'Not a Number'
+//Challenge 3
+//Speed limit = 70
+//5 -> 1 point
+//Math.floor(1.3) = 1
+//12 points => suspended
 
 //MY ANSWER
-const myOutput = fizzBuzz(15);
-console.log(myOutput);
+checkingSpeed(76)
 
-function fizzBuzz(myInput) {
-    if (myInput % 3 === 0 && myInput % 5 === 0)
-        return 'FizzBuzz';
-    else if (myInput % 3 !== 0 && myInput % 5 !== 0)
-        return myInput;
-    else if (myInput % 3 === 0)
-        return 'Fizz';
-    else if (myInput % 5 === 0)
-        return 'Buzz';
+function checkingSpeed(speed) {
+
+    const speedLimit = 70;
+    const kmPerPoint = 5;
+    const maxPoints = 12;
+
+    if (speed < speedLimit + kmPerPoint) {
+        console.log('Ok');
+        return;
+    }
+
+    const points = Math.floor((speed - speedLimit) / kmPerPoint);
+    if (points >= maxPoints)
+        console.log('Licence suspended');
     else
-        return 'Not a Number';
+        console.log('Points', points);
+
 }
 
 
 //TUTORS ANSWER
-const output = fizzBuzz(false);
-console.log(output);
-function fizzBuzz(input) {
-    if (typeof input !== 'number')
-        return NaN;
 
-    if ((input % 3 === 0) && (input % 5 === 0))
-        return 'FizzBuzz';
-    if (input % 3 === 0)
-        return 'Fizz';
-    if (input % 5 === 0)
-        return 'Buzz';
-
-    return input;
-}
 
 /*
-CONCLUSION ==> I was wrong! very wrong! but enlightened
+CONCLUSION ==> I almost got it!
 */
