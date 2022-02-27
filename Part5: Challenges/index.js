@@ -1,35 +1,34 @@
-//Challenge 3
-//Speed limit = 70
-//5 -> 1 point
-//Math.floor(1.3) = 1
-//12 points => suspended
+//Challenge 4
+
 
 //MY ANSWER
-checkingSpeed(76)
+checkOddOrEven(10);
 
-function checkingSpeed(speed) {
+function checkOddOrEven(limit) {
+    let i = 0;
+    while (i <= limit) {
 
-    const speedLimit = 70;
-    const kmPerPoint = 5;
-    const maxPoints = 12;
+        if (i % 2 === 0)
+            console.log(i + ' EVEN');
+        else
+            console.log(i + ' ODD')
 
-    if (speed < speedLimit + kmPerPoint) {
-        console.log('Ok');
-        return;
+        i++;
     }
-
-    const points = Math.floor((speed - speedLimit) / kmPerPoint);
-    if (points >= maxPoints)
-        console.log('Licence suspended');
-    else
-        console.log('Points', points);
-
+}
+console.log('-------------------')
+//TUTORS ANSWER
+//===> Used a for loop
+showNumbers(10)
+function showNumbers(limit) {
+    for (let i = 0; i <= limit; i++) {
+        //if (i % 2 === 0) console.log(i + ' EVEN');
+        //else console.log(i + ' ODD')
+        const message = (i % 2 === 0) ? ' EVEN' : ' ODD';
+        console.log(i, message);
+    }
 }
 
-
-//TUTORS ANSWER
-
-
 /*
-CONCLUSION ==> I almost got it!
+CONCLUSION ==> I got it!
 */
