@@ -1,24 +1,13 @@
 
-let number = 10;
+const circle = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
 
-function increase(number) {
-    number++;
-}
+for (let key in circle)
+    console.log(key, circle[key]);
 
-increase(number);
-console.log(number);//10
-
-console.log('-------------------');
-
-let obj = { value: 10 };
-
-function increase(obj) {
-    obj.value++;
-}
-
-increase(obj);
-console.log(obj);//11
-
-//<TAKE AWAY>
-//Primitives are copied by their value
-//Objects are copied by their reference
+for (let key of circle)
+    console.log(key);//Throws an error. circle is not iterable
