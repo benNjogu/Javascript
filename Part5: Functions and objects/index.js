@@ -1,13 +1,11 @@
 
-const circle1 = createCircle(4);
-console.log(circle1);
-circle1.draw();
-
-const circle2 = createCircle(8);
-console.log(circle2);
-circle2.draw();
+//Camel Notation: oneTwoThreeFour
+//Pascal Notation: OneTwoThreeFour
 
 //Factory function
+const myCircle = createCircle(4);
+console.log(myCircle);
+
 function createCircle(radius) {
     return {
         //in modern js if key and value are same,
@@ -17,4 +15,15 @@ function createCircle(radius) {
             console.log('draw')
         }
     };
+}
+
+//Constructor function
+const circle = new Circle(7);
+console.log(circle);
+
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function () {
+        console.log('draw');
+    }
 }
