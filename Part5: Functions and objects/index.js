@@ -1,25 +1,29 @@
 
-const circle = {
-    radius: 1
-};
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function () {
+        console.log('draw');
+    }
+}
 
-circle.color = 'Yellow';
-circle.draw = function () { };
+//internally the js engine represents the above as
+const Circle1 = new Function('radius', `
+this.radius = radius;
+    this.draw = function () {
+        console.log('draw');
+    }`)
 
-delete circle.color;
-delete circle.draw;
+const circle = new Circle1(1);
+//the above line can be written as
+Circle1.call({}, 1);
+Circle1.apply({}, [1, 2, 3]);
 
-//with circle as a constant, we cannot reasign
-//it but we can change it by adding or removing properties.
+circle.draw();
 
-console.log(circle);
+Circle.name//'Circle'
+Circle.length//1 ---> this gives the number of arguments
+Circle.constructor//ƒ Function() { [native code] }
 
-//if we write
-let x = {}
-//js engine will translate this to
-//let x = new Object();
 
-//every object has a constructor property which references the function that was uses to create that object.
-new String(); //'', "", ``
-new Boolean(); //true, false
-new Number();//1, 2, 3, ...
+//<TAKE-AWAY>
+//Functions are objects
