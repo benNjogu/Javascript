@@ -1,17 +1,23 @@
 
-let x = 10;
-let y = x;
+let number = 10;
 
-x = 20;
-//from the above
-//x=20 and y=10
+function increase(number) {
+    number++;
+}
 
-let x = { value: 10 };
-let y = x;
+increase(number);
+console.log(number);//10
 
-x.value = 20;
-//from the above
-//x=20 and y=20
+console.log('-------------------');
+
+let obj = { value: 10 };
+
+function increase(obj) {
+    obj.value++;
+}
+
+increase(obj);
+console.log(obj);//11
 
 //<TAKE AWAY>
 //Primitives are copied by their value
