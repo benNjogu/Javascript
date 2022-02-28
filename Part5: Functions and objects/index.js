@@ -1,29 +1,18 @@
 
-function Circle(radius) {
-    this.radius = radius;
-    this.draw = function () {
-        console.log('draw');
-    }
-}
+let x = 10;
+let y = x;
 
-//internally the js engine represents the above as
-const Circle1 = new Function('radius', `
-this.radius = radius;
-    this.draw = function () {
-        console.log('draw');
-    }`)
+x = 20;
+//from the above
+//x=20 and y=10
 
-const circle = new Circle1(1);
-//the above line can be written as
-Circle1.call({}, 1);
-Circle1.apply({}, [1, 2, 3]);
+let x = { value: 10 };
+let y = x;
 
-circle.draw();
+x.value = 20;
+//from the above
+//x=20 and y=20
 
-Circle.name//'Circle'
-Circle.length//1 ---> this gives the number of arguments
-Circle.constructor//ƒ Function() { [native code] }
-
-
-//<TAKE-AWAY>
-//Functions are objects
+//<TAKE AWAY>
+//Primitives are copied by their value
+//Objects are copied by their reference
