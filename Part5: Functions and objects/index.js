@@ -1,29 +1,15 @@
 
-//Camel Notation: oneTwoThreeFour
-//Pascal Notation: OneTwoThreeFour
+const circle = {
+    radius: 1
+};
 
-//Factory function
-const myCircle = createCircle(4);
-console.log(myCircle);
+circle.color = 'Yellow';
+circle.draw = function () { };
 
-function createCircle(radius) {
-    return {
-        //in modern js if key and value are same,
-        // remove the key! e.g radius: radius below
-        radius,
-        draw() {
-            console.log('draw')
-        }
-    };
-}
+delete circle.color;
+delete circle.draw;
 
-//Constructor function
-const circle = new Circle(7);
+//with circle as a constant, we cannot reasign
+//it but we can change it by adding or removing properties.
+
 console.log(circle);
-
-function Circle(radius) {
-    this.radius = radius;
-    this.draw = function () {
-        console.log('draw');
-    }
-}
