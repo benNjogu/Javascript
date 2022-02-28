@@ -9,5 +9,5 @@ const circle = {
 for (let key in circle)
     console.log(key, circle[key]);
 
-for (let key of circle)
-    console.log(key);//Throws an error. circle is not iterable
+for (let key of Object.keys(circle))
+    console.log(key);
