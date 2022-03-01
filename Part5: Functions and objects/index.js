@@ -1,23 +1,23 @@
 
-//Challenge 1
-/*
-Create an address object with 
-Street 
-City 
-Zipcode
-Then create a function called showAddress(address)
-that takes the address and returns key, value pairs.
-*/
+//String primitive
+const message = ' This is my first message \nto the people of Murang\'a';
 
-let address = {
-    street: 'kenol',
-    city: 'Muranga',
-    zipcode: '+254'
-};
+console.log(message.length);
+console.log(message[5]);
 
-function showAddress(address) {
-    for (let key in address)
-        console.log(key, address[key]);
-}
+//String object
+const another = new String('hi');
 
-showAddress(address);
+message[7]
+console.log(message.includes('first'));
+console.log(message.startsWith('This'));
+console.log(message.startsWith('this'));//case sensitive
+console.log(message.endsWith('e'));
+console.log(message.indexOf('my'));
+console.log(message.replace('first', 'second'));//does not modify the original string
+console.log(message.toUpperCase());
+console.log(message.trim());//removes white spaces in the begining and end of sentence
+console.log(message.trimLeft());
+console.log(message.split(' '));
+
+
