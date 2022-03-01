@@ -1,23 +1,29 @@
 
-//Challenge 1
+//Challenge 2
 /*
-Create an address object with 
-Street 
-City 
-Zipcode
-Then create a function called showAddress(address)
-that takes the address and returns key, value pairs.
+use a factory function to initialize an address object
+use a constructor function too
 */
 
-let address = {
-    street: 'kenol',
-    city: 'Muranga',
-    zipcode: '+254'
-};
-
-function showAddress(address) {
-    for (let key in address)
-        console.log(key, address[key]);
+//Factory function
+function makeAddress(street, city, zipCode) {
+    return {
+        street,
+        city,
+        zipCode
+    };
 }
 
-showAddress(address);
+console.log(makeAddress('kenol', 'Muranga', '+254'));
+
+console.log('------------------------')
+
+//Constructor function
+function Address(street, city, zipCode) {
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode;
+}
+
+let address1 = new Address('Kihingo', 'Muthithi', '+254');
+console.log(address1);
