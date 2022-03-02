@@ -13,3 +13,5 @@ let priceRanges = [
 let restaurants = [
     { averagePerPerson: 5 }
 ]
+
+console.log(priceRanges);
