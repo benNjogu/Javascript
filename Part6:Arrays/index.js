@@ -1,16 +1,23 @@
 
 
-const numbers = [1, 2, 3, 4];
+let numbers = [1, 2, 3, 4];
 
-//End
-let last = numbers.pop()
+//Emptying an array
+//Soln 1
+numbers = [];
 
-//Middle
-numbers.splice(2, 1);
+//Soln 2
+numbers.length = 0;
+
+//Soln 3
+//Using the splice method
+numbers.splice(0, numbers.length);
+
+//Soln 4
+//pop
+while (numbers.length > 0)
+    numbers.pop();
+
 console.log(numbers);
-console.log(middle);
 
-//Beginning
-let middle = numbers.shift();
-
-
+//Always go for soln 1 or 2(preferably)
