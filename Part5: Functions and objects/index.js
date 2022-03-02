@@ -1,35 +1,8 @@
 
-//String primitive
-const message = ' This is my first message \nto the people of Murang\'a';
+const now = new Date()
+const date1 = new Date('March 2 2022 14:53');
+const date2 = new Date(2022, 2, 2, 14, 53);
 
-//using template literals to clean code
-const another = `This is my 
-first message in murang'a`;
-//The above uses the Template literals (``)
-console.log(another);
-
-console.log('-------------');
-
-const another1 =
-    `Hi John 
-
-Thank you for joining my mailing list.
-
-regards,
-Ben.`
-
-console.log(another1);
-
-console.log('-------------');
-//To add a variable dynamically, you can use expression language
-let herName = 'Furaha';
-const another2 =
-    `Hi ${herName},
-
-Thank you for joining my mailing list.
-
-regards,
-Ben.`
-
-console.log(another2);
-
+console.log(now);
+console.log(date1);
+console.log(date2);
