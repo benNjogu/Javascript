@@ -1,16 +1,9 @@
 
-const numbers = [1, 2, 3];
+const numbers = [1, 2, 3, 9, 5, 6, 7];
 
-const joined = numbers.join(',');
-console.log(joined);
+numbers.sort();
 
-const message = 'This is my first message.';
+numbers.reverse(numbers);
+console.log(numbers);
 
-const parts = message.split(' ');
-
-console.log(parts);
-
-const combined = parts.join('-');
-
-console.log(combined);
-
+//Sorting and reversing numbers
