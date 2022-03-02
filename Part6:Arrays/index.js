@@ -1,9 +1,21 @@
 
-const numbers = [1, 2, 3, 9, 5, 6, 7];
+const courses = [
+    { id: 1, name: 'Node.js' },
+    { id: 2, name: 'java' }
+];
 
-numbers.sort();
+courses.sort(function (a, b) {
+    //a < b => -1
+    //a > b => 1
+    //a === b => 0
 
-numbers.reverse(numbers);
-console.log(numbers);
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
 
-//Sorting and reversing numbers
+    if (nameA < nameB) return -1;
+    if (nameA > nameB) return 1;
+    return 0;
+
+});
+
+console.log(courses);
