@@ -2,22 +2,34 @@
 //String primitive
 const message = ' This is my first message \nto the people of Murang\'a';
 
-console.log(message.length);
-console.log(message[5]);
+//using template literals to clean code
+const another = `This is my 
+first message in murang'a`;
+//The above uses the Template literals (``)
+console.log(another);
 
-//String object
-const another = new String('hi');
+console.log('-------------');
 
-message[7]
-console.log(message.includes('first'));
-console.log(message.startsWith('This'));
-console.log(message.startsWith('this'));//case sensitive
-console.log(message.endsWith('e'));
-console.log(message.indexOf('my'));
-console.log(message.replace('first', 'second'));//does not modify the original string
-console.log(message.toUpperCase());
-console.log(message.trim());//removes white spaces in the begining and end of sentence
-console.log(message.trimLeft());
-console.log(message.split(' '));
+const another1 =
+    `Hi John 
 
+Thank you for joining my mailing list.
+
+regards,
+Ben.`
+
+console.log(another1);
+
+console.log('-------------');
+//To add a variable dynamically, you can use expression language
+let herName = 'Furaha';
+const another2 =
+    `Hi ${herName},
+
+Thank you for joining my mailing list.
+
+regards,
+Ben.`
+
+console.log(another2);
 
