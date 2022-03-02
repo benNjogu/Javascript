@@ -1,37 +1,15 @@
 
 //Challenge 5
 /**
- *Create a blogpost object with these properties
-title
-body 
-author
-comments(author, body)
-isLive
- */
+ * Create a price range object
+*/
 
-let post = {
-    title: 'a',
-    body: 'b',
-    author: 'c',
-    views: '10',
-    comment: [
-        { author: 'a', body: 'b' },
-        { author: 'c', body: 'd' }
-    ],
-    isLive: true
-};
+let priceRanges = [
+    { label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10 },
+    { label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20 },
+    { label: '$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50 },
+];
 
-console.log(post);
-
-console.log('-------------------------');
-
-let post2 = new Post('a', 'b', 'c');
-console.log(post2);
-function Post(title, body, author) {
-    this.title = title;
-    this.body = body;
-    this.author = author;
-    this.views = 0;
-    this.comments = [];
-    this.isLive = false;
-}
+let restaurants = [
+    { averagePerPerson: 5 }
+]
