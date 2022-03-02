@@ -1,12 +1,16 @@
 
 const numbers = [1, 2, 3];
 
-for (let number of numbers)
-    console.log(number);
+const joined = numbers.join(',');
+console.log(joined);
 
-console.log('------------------');
+const message = 'This is my first message.';
 
-numbers.forEach((number, index) => console.log(index, number));
+const parts = message.split(' ');
 
+console.log(parts);
 
+const combined = parts.join('-');
+
+console.log(combined);
 
