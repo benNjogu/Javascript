@@ -1,16 +1,16 @@
 
-const courses = [
-    { id: 1, name: 'a' },
-    { id: 2, name: 'b' }
-];
 
-const course = courses.find(course => course.name === 'a');
-//The above returns the actual object
-console.log(course);
+const numbers = [1, 2, 3, 4];
 
-console.log('------------------------')
+//End
+let last = numbers.pop()
 
-const course2 = courses.findIndex(course => course.name === 'b');
-//The above returns index
-console.log(course2);
+//Middle
+numbers.splice(2, 1);
+console.log(numbers);
+console.log(middle);
+
+//Beginning
+let middle = numbers.shift();
+
 
