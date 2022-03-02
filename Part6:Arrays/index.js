@@ -1,13 +1,20 @@
 
-const numbers = [1, 2, 3, 1, 4];
+const courses = [
+    { id: 1, name: 'a' },
+    { id: 2, name: 'b' }
+];
 
-console.log(numbers.indexOf('a'));//-1
-console.log(numbers.lastIndexOf(1));//3
-console.log('-------------------');
-console.log(numbers.indexOf(1));
-console.log(numbers.indexOf(1, 1));
-console.log('-------------------');
-//check if a certain number exists
-console.log(numbers.indexOf(1) === -1);
-console.log(numbers.includes(1));
+const course = courses.find(function (course) {
+    return course.name === 'a';
+});
+//The above returns the actual object
+console.log(course);
+
+console.log('------------------------')
+
+const course2 = courses.findIndex(function (course) {
+    return course.name === 'b';
+});
+//The above returns index
+console.log(course2);
 
