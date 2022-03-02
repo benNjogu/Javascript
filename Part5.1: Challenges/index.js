@@ -1,29 +1,31 @@
 
-//Challenge 2
+//Challenge 3  
 /*
-use a factory function to initialize an address object
-use a constructor function too
+Create two functions areEqual=>checks if properties are equal
+and areSame => checks if 
 */
+let address1 = new Address();
+let address2 = new Address();
+let address3 = address2;
 
-//Factory function
-function makeAddress(street, city, zipCode) {
-    return {
-        street,
-        city,
-        zipCode
-    };
-}
+console.log(areEqual(address1, address2));//true
+console.log('-----------------')
+console.log(areSame(address1, address2));//false
+console.log('-----------------')
+console.log(areSame(address3, address2));//true
 
-console.log(makeAddress('kenol', 'Muranga', '+254'));
-
-console.log('------------------------')
-
-//Constructor function
 function Address(street, city, zipCode) {
     this.street = street;
     this.city = city;
     this.zipCode = zipCode;
 }
 
-let address1 = new Address('Kihingo', 'Muthithi', '+254');
-console.log(address1);
+function areEqual(address1, address2) {
+    return address1.street === address2.street &&
+        address1.street === address2.street &&
+        address1.street === address2.street;
+}
+
+function areSame(address1, address2) {
+    return address1 === address2;
+}
