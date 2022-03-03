@@ -1,27 +1,21 @@
 /**
- * Challenge 4
- * Move elements of an array
+ * Challenge 5
+ * Count occurrences of an element in an array
  */
 
-const array = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 3, 5];
 
-const output = move(array, 0, -1);
+const count = countOccurrences(numbers, 3);
 
-console.log(output);
+console.log(count);
 
-function move(array, index, offset) {
+function countOccurrences(array, searchElement) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++)
+        if (array[i] === searchElement)
+            sum++;
 
-    const position = index + offset;
-    if (position >= array.length || position < 0) {
-        console.error('Invalid offset');
-        return;
-    }
-
-    const output = [...array];
-    const element = output.splice(index, 1);
-    output.splice(index + offset, 0, element[0]);
-
-    return output;
+    return sum;
 }
 
 
