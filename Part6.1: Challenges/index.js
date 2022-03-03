@@ -1,25 +1,27 @@
 /**
- * Challenge 2
- * Take two arrays and from the first one remove elements 
- * in the second one.
+ * Challenge 4
+ * Move elements of an array
  */
 
-const numbers = [1, 2, 3, 4, 5];
-const output = move(numbers, 0, 4);
+const array = [1, 2, 3, 4, 5];
+
+const output = move(array, 0, -1);
 
 console.log(output);
 
-function move(arrays, index, offset) {
+function move(array, index, offset) {
 
-    if (offset >= arrays.length)
-        return console.error('Invalid offset');
+    const position = index + offset;
+    if (position >= array.length || position < 0) {
+        console.error('Invalid offset');
+        return;
+    }
 
-    let num;
-    num = arrays[index];
-    arrays[index] = arrays[offset];
-    arrays[offset] = num;
+    const output = [...array];
+    const element = output.splice(index, 1);
+    output.splice(index + offset, 0, element[0]);
 
-    return arrays;
+    return output;
 }
 
 
