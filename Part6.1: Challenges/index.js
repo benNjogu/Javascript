@@ -1,19 +1,24 @@
 /**
- * Challenge 1
- * Write a function that takes two parameters min and max
- * and returns an array between min and max inclusive
- * as output
+ * Challenge 2
+ * Create a method that works like include function
  */
 
-const numbers = arrayFromRange(1, 4);
-console.log(numbers);
+const array = [1, 2, 3, 4, 5];
 
-function arrayFromRange(min, max) {
-    const output = [];
-    for (let i = min; i <= max; i++)
-        output.push(i);
+let isIn = myIncludes(array, 8);
 
-    return output;
+console.log(isIn);
+
+function myIncludes([], number) {
+    let i = 0;
+    while (i < array.length) {
+        if (array[i] === number) {
+            return true;
+        }
+        i++;
+    }
+
+    return false;
 }
 
-//Output => [1, 2, 3, 4]
+
