@@ -5,18 +5,14 @@
 
 const array = [1, 2, 3, 4, 5];
 
-let isIn = myIncludes(array, 8);
+let isIn = myIncludes(array, 4);
 
 console.log(isIn);
 
 function myIncludes([], number) {
-    let i = 0;
-    while (i < array.length) {
-        if (array[i] === number) {
+    for (let num of array)
+        if (num === number)
             return true;
-        }
-        i++;
-    }
 
     return false;
 }
