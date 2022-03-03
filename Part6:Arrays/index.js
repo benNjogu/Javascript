@@ -9,6 +9,6 @@ for (let n of numbers)
 //Soln 2
 const sum = numbers.reduce((accumulator, currentValue) => {
     return accumulator + currentValue;
-}, 0);//0 is the initial of the accumulator
+});
 
 console.log(sum);
