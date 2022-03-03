@@ -1,20 +1,25 @@
 /**
  * Challenge 2
- * Create a method that works like include function
+ * Take two arrays and from the first one remove elements 
+ * in the second one.
  */
 
-const array = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
+const output = move(numbers, 0, 4);
 
-let isIn = myIncludes(array, 4);
+console.log(output);
 
-console.log(isIn);
+function move(arrays, index, offset) {
 
-function myIncludes([], number) {
-    for (let num of array)
-        if (num === number)
-            return true;
+    if (offset >= arrays.length)
+        return console.error('Invalid offset');
 
-    return false;
+    let num;
+    num = arrays[index];
+    arrays[index] = arrays[offset];
+    arrays[offset] = num;
+
+    return arrays;
 }
 
 
