@@ -7,8 +7,8 @@ for (let n of numbers)
     sum += n;*/
 
 //Soln 2
-const sum = numbers.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue;
-});
+const sum = numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+);
 
 console.log(sum);
