@@ -1,21 +1,19 @@
 
-const courses = [
-    { id: 1, name: 'Node.js' },
-    { id: 2, name: 'java' }
-];
+const numbers = [-1, -2, 3, -4];
 
-courses.sort(function (a, b) {
-    //a < b => -1
-    //a > b => 1
-    //a === b => 0
-
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
-
-    if (nameA < nameB) return -1;
-    if (nameA > nameB) return 1;
-    return 0;
-
+const allPositive = numbers.every(function (value) {
+    return value >= 0;
 });
+/**
+ * @The above method returns true if allPositive 
+ * and false if any is negative.
+ */
 
-console.log(courses);
+const atLeastOnePositive = numbers.some(function (value) {
+    return value >= 0;
+});
+/**
+ * @The above checks to see if at least one 
+ * of the elements is positive in which it returns true
+ */
+console.log(atLeastOnePositive);
