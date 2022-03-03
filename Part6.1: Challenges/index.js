@@ -1,19 +1,23 @@
 /**
- * Challenge 5
- * Count occurrences of an element in an array
+ * Challenge 6
+ * 
  */
 
-const numbers = [1, 2, 3, 3, 5];
+const numbers = [1, 2, 3, 3, 7];
 
-const count = countOccurrences(numbers, 3);
+const max = getMax(numbers);
 
-console.log(count);
+console.log(max);
 
-function countOccurrences(array, searchElement) {
-    return array.reduce((accumulator, current) => {
-        const occurence = (current === searchElement) ? 1 : 0;
-        return accumulator + occurence;
-    }, 0);
+function getMax(array) {
+    if (array.lenght === 0) return undefined;
+
+    let max = array[0];
+    for (let element of array)
+        if (element > max)
+            max = element;
+
+    return max;
 }
 
 
