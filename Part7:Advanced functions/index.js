@@ -1,9 +1,12 @@
 
 //The spread operator takes all the arguments and
 //put them in an array
-function sum(...args) {
-    //console.log(args);
-    return args.reduce((a, b) => a + b)
+function sum(discount, ...prices) {
+    const total = prices.reduce((a, b) => a + b);
+    return total * (1 - discount);
 }
 
-console.log(sum(1, 2, 3, 4, 5));
+console.log(sum(0.1, 20, 30));
+
+//NB: Rest parameter should be the last parameter in a function
+//Otherwise, error!!
