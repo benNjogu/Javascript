@@ -1,12 +1,10 @@
 
-//The spread operator takes all the arguments and
-//put them in an array
-function sum(discount, ...prices) {
-    const total = prices.reduce((a, b) => a + b);
-    return total * (1 - discount);
+function interest(principal, rate, years) {
+
+    rate = rate || 3.5;
+    years = years || 5;
+
+    return principal * rate / 100 * years;
 }
 
-console.log(sum(0.1, 20, 30));
-
-//NB: Rest parameter should be the last parameter in a function
-//Otherwise, error!!
+console.log(interest(10000, 4));
