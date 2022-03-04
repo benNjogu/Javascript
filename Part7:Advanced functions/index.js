@@ -1,23 +1,10 @@
 
-//Function declaration
-function walk() {
-    console.log('walk');
+function sum() {
+    let total = 0;
+    for (let value of arguments)
+        total += value;
+
+    return total;
 }
 
-//Anonymous Function Expression
-let run = function () {
-    console.log('run');
-};
-
-let move = run;
-run();
-move();
-
-//Named Function Expression
-let running = function running() {
-    console.log('run');
-};
-
-//Hoisting 
-//Moving function declarations to the top of the file
-//You cannot call an anonymous function before its initialization
+console.log(sum(1, 2, 3, 4, 5));
