@@ -7,5 +7,7 @@ function start() {
     console.log(i);
 }
 
+//var => function-scoped variable
+//ES6 (ES2015): let, const => block-scoped
 
 start();//no error
