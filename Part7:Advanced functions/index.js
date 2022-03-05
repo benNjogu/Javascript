@@ -8,14 +8,16 @@ const person = {
     },
 
     set fullName(value) {
+        if (typeof value !== 'string') return;
+
         const parts = value.split(' ');
         this.firstName = parts[0];
         this.secondName = parts[1];
     }
 };
 
-person.fullName = 'Peter wathiringi';
+person.fullName = null;
 
 //getters => access properties in an object
 //setters => change (mutate) then
-console.log(person.fullName);
+console.log(person);
