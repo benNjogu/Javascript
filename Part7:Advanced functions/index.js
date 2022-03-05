@@ -1,32 +1,13 @@
 
-const person = {
-    firstName: 'ben',
-    secondName: 'Njogu',
+function start() {
+    const message = 'hi';
 
-    get fullName() {
-        return `${person.firstName} ${person.secondName}`
-    },
-
-    set fullName(value) {
-        if (typeof value !== 'string')
-            throw new Error('value is not a string.');
-
-        const parts = value.split(' ');
-        if (parts.length !== 2)
-            throw new Error('Enter a first and last name.')
-
-        this.firstName = parts[0];
-        this.secondName = parts[1];
+    if (true) {
+        const another = 'bye';
     }
-};
 
-try {
-    person.fullName = '';
-} catch (e) {
-    console.log(e);
-    alert(e);
+    console.log(another);
 }
+console.log(message);
 
-//getters => access properties in an object
-//setters => change (mutate) then
-console.log(person);
+
