@@ -1,7 +1,11 @@
 
 const person = {
     firstName: 'ben',
-    secondName: 'Njogu'
-}
+    secondName: 'Njogu',
 
-console.log(`${person.firstName} ${person.secondName}`);
+    fullName() {
+        return `${person.firstName} ${person.secondName}`
+    }
+};
+
+console.log(person.fullName());
