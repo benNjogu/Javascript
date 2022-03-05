@@ -1,13 +1,11 @@
 
 function start() {
-    const message = 'hi';
-
-    if (true) {
-        const another = 'bye';
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
     }
 
-    console.log(another);
+    console.log(i);
 }
-console.log(message);
 
 
+start();//throws an error
