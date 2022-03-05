@@ -1,13 +1,12 @@
 
-function start() {
-    for (var i = 0; i < 5; i++) {
-        console.log(i);
+//1. if the function is a method -> this references that obj
+//2. if the function is a regular function -> this references the global obj(window, global)
+
+const video = {
+    title: 'a',
+    play() {
+        console.log(this);
     }
+};
 
-    console.log(i);
-}
-
-//var => function-scoped variable
-//ES6 (ES2015): let, const => block-scoped
-
-start();//no error
+video.play();
