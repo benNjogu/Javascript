@@ -9,8 +9,8 @@ const video = {
     }
 };
 
-video.stop = function () {
+function playVideo() {
     console.log(this);
 }
 
-video.stop();
+playVideo();
