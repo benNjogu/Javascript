@@ -5,6 +5,6 @@ function playVideo(a, b) {
 
 playVideo.call({ name: 'Ben' }, 1, 2);
 playVideo.apply({ name: 'Ben' }, [1, 2]);
-const fn = playVideo.bind({ name: 'Ben' });//returns a function
-fn();
+const fn = playVideo.bind({ name: 'Ben' })();
 
+//NB: Arrow functions also solve the problem since they inherit the this keyword
