@@ -1,15 +1,17 @@
 
 /**
- * Challenge1 = sum of arguments
- * Write a function that takes arguments and returns their sum
- */
+ * Challenge2 = area of a circle
+ * write a circle object where properties can be added 
+ * but area is read only.
+ * */
 
-function sum(...items) {
-    if (items.length === 1 && Array.isArray(items[0]))
-        items = [...items[0]];
+let circle = {
+    radius: 1,
 
-    return items.reduce((a, b) => a + b);
+    get area() {
+        return Math.PI * this.radius * this.radius;
+    }
 }
 
-console.log(sum([1, 2, 3, 4]));
-
+circle.radius = 7;
+console.log(circle.area);
