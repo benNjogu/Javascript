@@ -4,11 +4,11 @@
  * REFERENCES TYPES:- object, functions, arrays
  */
 
-let x = 10;
+let x = { value: 10 };
 let y = x;
 
-x = 20;
+x.value = 20;
 
-console.log(x);//ans=20
-console.log(y);//ans=10
-//in this case the variables are storing the actual values
+console.log(x.value);//ans=20
+console.log(y.value);//ans=20
+//in this case the variables are storing the references to values
