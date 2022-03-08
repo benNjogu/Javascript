@@ -1,19 +1,15 @@
 
-/**
- * VALUES TYPES:- numbers, string, boolean, symbol, undefined, null
- * REFERENCES TYPES:- object, functions, arrays
- */
+//constructor function
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function () {
+        console.log('draw');
+    };
+}
 
-let x = { value: 10 };
-let y = x;
+const circle = new Circle(10);
 
-x.value = 20;
+circle.location = { x: 1 };
+circle['location'] = { x: 1 };
 
-console.log(x.value);//ans=20
-console.log(y.value);//ans=20
-//in this case the variables are storing the references to values
-
-/**
- * primitives are copied by their value
- * objects are copied by their referece
- */
+console.log(circle); 
