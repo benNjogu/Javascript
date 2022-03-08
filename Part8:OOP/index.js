@@ -12,3 +12,8 @@ x.value = 20;
 console.log(x.value);//ans=20
 console.log(y.value);//ans=20
 //in this case the variables are storing the references to values
+
+/**
+ * primitives are copied by their value
+ * objects are copied by their referece
+ */
