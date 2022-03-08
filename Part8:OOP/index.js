@@ -1,9 +1,25 @@
 
-let x = {};
+//constructor function
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function () {
+        console.log('draw');
+    };
+}
 
-/**
- * The above will be translated to
- * let x = new Object() by js engine.
- */
+Circle.call({}, 1);
+Circle.apply({}, [1]);
 
-//Every object has a constructor property which references the property which was use to create that object
+const Circle1 = new Function('radius',
+    `this.radius = radius;
+this.draw = function () {
+    console.log('draw');
+}`
+);
+
+const circle = new Circle1(1);
+console.log(circle);
+
+const another = new Circle(1);
+
+console.log(Circle.name);
