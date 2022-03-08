@@ -1,25 +1,14 @@
 
-//constructor function
-function Circle(radius) {
-    this.radius = radius;
-    this.draw = function () {
-        console.log('draw');
-    };
-}
+/**
+ * VALUES TYPES:- numbers, string, boolean, symbol, undefined, null
+ * REFERENCES TYPES:- object, functions, arrays
+ */
 
-Circle.call({}, 1);
-Circle.apply({}, [1]);
+let x = 10;
+let y = x;
 
-const Circle1 = new Function('radius',
-    `this.radius = radius;
-this.draw = function () {
-    console.log('draw');
-}`
-);
+x = 20;
 
-const circle = new Circle1(1);
-console.log(circle);
-
-const another = new Circle(1);
-
-console.log(Circle.name);
+console.log(x);//ans=20
+console.log(y);//ans=10
+//in this case the variables are storing the actual values
