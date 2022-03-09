@@ -1,23 +1,36 @@
 
+/**
+ * ABSTRACTION:-
+ * Hide the data and complexities and show only the essentials.
+ * 
+ * CLOSURE:-
+ * Determines what variables are accessible to an inner function.
+ */
+
 //constructor function
 function Circle(radius) {
+
+    let color = 'red';
+
     this.radius = radius;
+
+    let defaultLocation = {
+        x: 0,
+        y: 0
+    };
+
+    this.computeOptimumLocation = function () {
+
+    };
+
     this.draw = function () {
+        computeOptimumLocation();
+
         console.log('draw');
     };
+
 }
 
 const circle = new Circle(10);
-
-//soln 1: getting all keys and objects
-for (let key in circle)
-    if (typeof circle[key] !== 'function')
-        console.log(key, circle[key]);
-
-
-//soln 1: getting all keys and objects
-console.log(Object.keys(circle));
-
-//Equivalent of contains in Java
-if ('radius' in circle)
-    console.log('Circle has a radius');
+circle.computeOptimumLocation();
+circle.draw();
