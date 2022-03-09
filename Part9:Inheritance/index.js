@@ -1,19 +1,18 @@
 
 let person = { name: 'Ben' };
-let objectBase = Object.getPrototypeOf(person);
-let descriptor = Object.getOwnPropertyDescriptor(objectBase, 'toString');
-console.log(descriptor);
+
+Object.defineProperty(person, 'name', {
+    writable: false,//cannot write 
+    enumerable: false,//cannot enumerate
+    configurable: false//cannot delete
+});
+
+person.name = 'kimangas';
+delete person.name;
+
+console.log(person);
+console.log(Object.keys(person));
 
 /**
- * enumerable: false, configurable: true }
-
-    configurable: true
-
-    enumerable: false
-
-    value: function toString()
-
-    writable: true
+ * With the above properties you cannot write or enumerate the person property
  */
-
-//The above shows why we cannot enumerate the object properties
