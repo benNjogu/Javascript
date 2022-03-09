@@ -10,8 +10,6 @@
 //constructor function
 function Circle(radius) {
 
-    let color = 'red';
-
     this.radius = radius;
 
     let defaultLocation = {
@@ -19,18 +17,16 @@ function Circle(radius) {
         y: 0
     };
 
-    this.computeOptimumLocation = function () {
-
+    this.getDefaultLocation = function () {
+        return defaultLocation;
     };
 
     this.draw = function () {
-        computeOptimumLocation();
-
         console.log('draw');
     };
 
 }
 
 const circle = new Circle(10);
-circle.computeOptimumLocation();
+circle.getDefaultLocation();//accessing using a function
 circle.draw();
