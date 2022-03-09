@@ -1,18 +1,6 @@
 
-let person = { name: 'Ben' };
+function Circle(radius) {
+    this.radius = radius;
+}
 
-Object.defineProperty(person, 'name', {
-    writable: false,//cannot write 
-    enumerable: false,//cannot enumerate
-    configurable: false//cannot delete
-});
-
-person.name = 'kimangas';
-delete person.name;
-
-console.log(person);
-console.log(Object.keys(person));
-
-/**
- * With the above properties you cannot write or enumerate the person property
- */
+const circle = new Circle(1);
