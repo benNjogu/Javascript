@@ -9,7 +9,5 @@ function Circle(radius) {
 
 const circle = new Circle(10);
 
-circle.location = { x: 1 };
-circle['location'] = { x: 1 };
-
-console.log(circle); 
+for (let key in circle)
+    console.log(key, circle[key]);
