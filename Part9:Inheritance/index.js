@@ -9,17 +9,15 @@ function Circle(radius) {
 }
 
 //Prototype members
-//This writes the draw method on the prototype
 Circle.prototype.draw = function () {
     this.move();
     console.log('draw');
 }
 
 const c1 = new Circle(1);
-const c2 = new Circle(2);
 
-console.log(c1);
+//Only returns instant members
+console.log(Object.keys(c1));
 
-Circle.prototype.toString = function () {
-    return 'Circle with radius ' + this.radius;
-}
+//Returns all members(instant + prototype)
+for (let key in c1) console.log(key);
