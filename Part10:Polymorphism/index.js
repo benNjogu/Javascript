@@ -12,6 +12,8 @@ function Circle(radius) {
 
 //creates the prototypical inheritance
 Circle.prototype = Object.create(Shape.prototype);
+//assign constructor to circle
+Circle.prototype.constructor = Circle;
 
 Circle.prototype.draw = function () {
     console.log('draw');
