@@ -1,20 +1,25 @@
 
-function HtmlSelectElement() {
-
-}
-
-HtmlSelectElement.prototype.focus = function () {
-    console.log('focus');
-}
-
-function extend(Child, Parent) {
-    Child.prototype = Object.create(Parent.prototype);
-    Child.prototype.constructor = Child;
-
-}
-
 function HtmlElement() {
-    console.log('click');
+    this.click = function () {
+        console.log('clicked');
+    }
 }
 
-extend(HtmlElement, HtmlSelectElement);
+HtmlElement.prototype.focus = function () {
+    console.log('focused');
+}
+
+function HTMLSelectElement(items = []) {
+    this.items = items;
+
+    this.addItem = function (item) {
+        this.items.push;
+    }
+
+    this.removeItem = function (item) {
+        this.items.splice(this.items.indexOf(item), 1);
+    }
+}
+
+HTMLSelectElement.prototype = new HtmlElement();
+HTMLSelectElement.prototype.constructor = HTMLSelectElement;
