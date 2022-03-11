@@ -1,45 +1,20 @@
 
-function mixin(target, ...sources) {//rest operator
-    Object.assign(target, ...sources)//spread operator
-}
-
-const canEat = {
-    eat: function () {
-        this.hunger--;
-        console.log('eating');
-    }
-};
-
-const canWalk = {
-    walk: function () {
-        console.log('walking');
-    }
-}
-
-const canSwim = {
-    swim: function () {
-        console.log('swimming');
-    }
-}
-
-function Person() {
-
-    this.isStudent = true;
-    this.height = 560;
+function HtmlSelectElement() {
 
 }
 
-mixin(Person.prototype, canEat, canWalk, canSwim);
+HtmlSelectElement.prototype.focus = function () {
+    console.log('focus');
+}
 
-const person = new Person();
-console.log(person);
-
-function Omena() {
+function extend(Child, Parent) {
+    Child.prototype = Object.create(Parent.prototype);
+    Child.prototype.constructor = Child;
 
 }
 
-mixin(Omena.prototype, canEat, canSwim)
+function HtmlElement() {
+    console.log('click');
+}
 
-const omena = new Omena();
-console.log(omena);
-
+extend(HtmlElement, HtmlSelectElement);
