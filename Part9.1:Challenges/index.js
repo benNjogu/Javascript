@@ -39,12 +39,12 @@ Stopwatch.prototype.stop = function () {
     this.endTime = new Date();
 
     const seconds = (endTime.getTime() - startTime.getTime()) / 1000;
-    this.duration += seconds;
+    duration += seconds;
 };
 
 Stopwatch.prototype.reset = function () {
     this.startTime = null;
     this.endTime = null;
     this.running = false;
-    this.duration = 0;
+    duration = 0;
 };
