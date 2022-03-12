@@ -1,25 +1,16 @@
 
-class Circle {
-    constructor(radius) {
-        this.radius = radius;
-    }
+'use strict'
 
-    //instance method
-    draw() {
+const Circle = function () {
+    this.draw = function () { console.log(this); }
+};
 
-    }
+const c = new Circle();
 
-    //static method
-    /**
-     * Used to create utility functions that are not tied to 
-     * a particular object.
-     */
-    static parse(str) {
-        const radius = JSON.parse(str).radius;
-        return new Circle(radius);
-    }
-}
+//Method Call
+c.draw();
 
-const circle = Circle.parse('{ "radius": 1 }');
-console.log(circle);
+const draw = c.draw;
 
+//Function Call
+draw();
