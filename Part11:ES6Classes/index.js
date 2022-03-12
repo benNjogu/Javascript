@@ -1,15 +1,17 @@
 
-sayHello();//can be called from here. its hoisting!!
+const c = new Circle();//this throws an error
 
-sayGoodBye()//throws an error. the function is not hoisted!!
+//class declaration
+class Circle {
 
-//Function Declaration
-function sayHello() { }
+}
 
-//Function Expression
-const sayGoodBye = function () { };
+//class expression
+const Square = class {
+
+};
 
 /**
- * NB: Function expressions are not hoisted.
- * same as regular variables e.g. let number = 1
+ * NB: Class declarations and expressions are not hoisted
+ * The above throws an error!!
  */
