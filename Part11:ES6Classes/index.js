@@ -1,17 +1,25 @@
 
-const c = new Circle();//this throws an error
-
-//class declaration
 class Circle {
+    constructor(radius) {
+        this.radius = radius;
+    }
 
+    //instance method
+    draw() {
+
+    }
+
+    //static method
+    /**
+     * Used to create utility functions that are not tied to 
+     * a particular object.
+     */
+    static parse(str) {
+        const radius = JSON.parse(str).radius;
+        return new Circle(radius);
+    }
 }
 
-//class expression
-const Square = class {
+const circle = Circle.parse('{ "radius": 1 }');
+console.log(circle);
 
-};
-
-/**
- * NB: Class declarations and expressions are not hoisted
- * The above throws an error!!
- */
