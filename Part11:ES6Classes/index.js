@@ -1,16 +1,15 @@
 
+
+const _radius = Symbol();
 class Circle {
     constructor(radius) {
-        this._radius = radius;
+        //this.radius = radius;
+        //this['radius'] = radius;
+        /**The above lines are the same */
+        this[_radius] = radius;
     }
 }
 
 const c = new Circle(1);
-c._radius
-
-/**
- * The above approach is used by some developers
- * to mark variables as private.
- * NB:This is a terrible approach.
- * because it doesnt prevent external access.
- */
+const key = Object.getOwnPropertySymbols(c)[0];
+console.log(c[key]);
