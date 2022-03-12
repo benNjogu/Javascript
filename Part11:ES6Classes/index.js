@@ -1,16 +1,15 @@
 
-'use strict'
-
-const Circle = function () {
-    this.draw = function () { console.log(this); }
-};
+class Circle {
+    draw() {
+        console.log(this);
+    }
+}
 
 const c = new Circle();
-
-//Method Call
-c.draw();
-
 const draw = c.draw;
-
-//Function Call
 draw();
+/**
+ * The above will give undefined as output.
+ * NB:by default the body of our classes are defined 
+ * in strict mode!!
+ */
