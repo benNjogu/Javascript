@@ -5,8 +5,13 @@ class Circle {
         _radius.set(this, radius);
     }
 
-    getRadius() {
+    get radius() {
         return _radius.get(this);
+    }
+
+    set radius(value) {
+        if (value <= 0) throw new Error('invalid radius');
+        _radius.set(this, value);
     }
 }
 
