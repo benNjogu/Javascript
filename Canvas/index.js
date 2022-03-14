@@ -1,12 +1,17 @@
 let cx = document.querySelector('canvas').getContext('2d');
 cx.beginPath();
-cx.moveTo(50, 10);
-cx.lineTo(10, 70);
-cx.lineTo(90, 70);
-cx.fill();
+cx.moveTo(10, 90);
+//control=(60,10) goal=(90,90)
+cx.quadraticCurveTo(60, 10, 90, 90);
+cx.lineTo(60, 10);
+cx.closePath();
+cx.stroke();
 
 /**
- * This example draws a filled triangle. Note that only two of the triangle’s
-sides are explicitly drawn. The third, from the bottom-right corner back to the
-top, is implied and wouldn’t be there when you stroke the path.
+ * We draw a quadratic curve from the left to the right, with (60,10) as control
+point, and then draw two line segments going through that control point and
+back to the start of the line. The result somewhat resembles a Star Trek
+insignia. You can see the effect of the control point: the lines leaving the lower
+corners start off in the direction of the control point and then curve toward
+their target.
  */
