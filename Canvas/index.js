@@ -1,17 +1,12 @@
 let cx = document.querySelector('canvas').getContext('2d');
 cx.beginPath();
-
-for (let y = 10; y <= 100; y += 10) {
-    cx.moveTo(10, y);
-    cx.lineTo(90, y);
-}
-
-cx.stroke();
+cx.moveTo(50, 10);
+cx.lineTo(10, 70);
+cx.lineTo(90, 70);
+cx.fill();
 
 /**
- * This example creates a path with a number of horizontal line segments and
-   then strokes it using the stroke method. Each segment created with lineTo
-   starts at the path’s current position.
-   That position is usually the end of the last segment, unless moveTo was called. In that case, the next segment would
-   start at the position passed to moveTo .
+ * This example draws a filled triangle. Note that only two of the triangle’s
+sides are explicitly drawn. The third, from the bottom-right corner back to the
+top, is implied and wouldn’t be there when you stroke the path.
  */
