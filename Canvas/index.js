@@ -1,10 +1,9 @@
-let cx = document.querySelector("canvas").getContext("2d");
-cx.strokeStyle = "blue";
-cx.strokeRect(5, 5, 50, 50);
-cx.lineWidth = 5;
-cx.strokeRect(135, 5, 50, 50);
+let cx = document.querySelector('canvas').getContext('2d');
+cx.beginPath();
 
-/**
- * This code draws two blue squares, using a thicker line for the second one.
- * 
- */
+for (let y = 10; y <= 100; y += 10) {
+    cx.moveTo(10, y);
+    cx.lineTo(90, y);
+}
+
+cx.stroke();
