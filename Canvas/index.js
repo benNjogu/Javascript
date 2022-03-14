@@ -1,10 +1,9 @@
-/**
- * A 2D canvas drawing context provides the methods fillText and strokeText .
-The latter can be useful for outlining letters, but usually fillText is what you
-need. It will fill the outline of the given text with the current fillStyle .
- */
 
 let cx = document.querySelector("canvas").getContext("2d");
-cx.font = "28px Georgia";
-cx.fillStyle = "fuchsia";
-cx.fillText("I can draw text, too!", 10, 50);
+let img = document.createElement('img');
+img.src = "img/hat.png";
+img.addEventListener("load", () => {
+    for (let x = 10; x < 200; x += 30) {
+        cx.drawImage(img, x, 10, 20, 20);
+    }
+});
