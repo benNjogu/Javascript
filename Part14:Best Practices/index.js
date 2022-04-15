@@ -31,3 +31,15 @@ const retrieveFinalValue = (element) => {
 }
 
 retrieveFinalValue(exampleArray);
+
+//Stop writing comments - Code must speak for itself!
+//code should be self explanatory
+/**
+ * "whilel comments are neither inherently good or bad,
+ * they are frequently used as crutch.
+ * You should write your codes as if comments didn't exist.
+ * This forces you to write your code in the simplest, plainest, most self-documenting
+ * way you can humanly come up with." -Jeff Atwood
+ * 
+ */
+
