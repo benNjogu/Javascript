@@ -58,3 +58,14 @@ const add = (a, b, c) => a + b + c;
 const multiply = (a, b, c) => a * b * c;
 
 const subtract = (a, b, c) => a - b - c;
+
+//Code repetition
+const getUserCredentials = (user) => {
+    //poor
+    const name = user.name;
+    const surname = user.surname;
+    const email = user.email;
+    const password = user.password;
+    //good
+    const { name, surname, email, password } = user;
+}
