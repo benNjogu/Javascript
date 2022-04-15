@@ -78,3 +78,22 @@ getUserData; /*vs*/ getUserPosts;
 findUser; /*vs*/ findUserByNameOrEmail;
 //use shorter version
 getUserFromDatabase; /*vs*/ getUser;
+
+//Use consistent verbs per concept
+//functions will ussually create, read, update or delete something
+getQuestions; //get
+returnUsers; /*get ->*/ getUsers;
+//Make booleans that read well in if-then statements
+let car = {};
+sedan, sold, green, airbug;//wrong
+isSedan, isSold, isGreen, isAirbug;//correct
+
+car.isSedan, car.isSold, car.isGreen, car.hasAirbug;
+
+//use nouns for classNames
+class Car = {
+
+}
+//use PascalCase for classNames
+camelCase;
+PascalCase;
