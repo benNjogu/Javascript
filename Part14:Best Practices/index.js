@@ -97,3 +97,13 @@ class Car = {
 //use PascalCase for classNames
 camelCase;
 PascalCase;
+
+//Capitalize constant values SNAKE UPPER CASE
+const SECONDS_IN_A_DAY;
+
+const HOURS_IN_A_DAY = 24;//doesn't change
+const user = foundUser;//keeps changing
+
+//Avoid one letter variable names
+const q = () => { };//poor
+const query = () => { };//good 
