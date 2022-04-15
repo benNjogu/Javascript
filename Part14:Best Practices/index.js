@@ -69,3 +69,12 @@ const getUserCredentials = (user) => {
     //good
     const { name, surname, email, password } = user;
 }
+
+//Variable naming
+const camelCase = '';
+//use meaningful names
+getUserData; /*vs*/ getUserPosts;
+//favor descriptive over concise
+findUser; /*vs*/ findUserByNameOrEmail;
+//use shorter version
+getUserFromDatabase; /*vs*/ getUser;
